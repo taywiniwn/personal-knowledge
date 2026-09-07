@@ -60,7 +60,7 @@ bun run build
 
 ## CI
 
-`.github/workflows/build.yml`：在 push / pull_request 到 main 时安装依赖、执行构建，并上传 build artifact。
+工作流模板见 `ci/build.yml`。复制到 `.github/workflows/build.yml` 后即可启用（推送该路径需要 GitHub token 具备 workflow 权限）。启用后会在 push / PR 到 main 时安装依赖、执行构建，并上传 build artifact。
 
 ## 仓库
 
