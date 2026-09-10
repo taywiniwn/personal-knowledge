@@ -1,22 +1,7 @@
 {
-  "title": "示例资产走势（占位数据，可替换）",
+  "title": "",
   "currency": "CNY",
-  "updatedAt": "2026-09-01",
-  "series": [
-    {"date": "2026-01-01", "value": 100},
-    {"date": "2026-02-01", "value": 102},
-    {"date": "2026-03-01", "value": 98},
-    {"date": "2026-04-01", "value": 105},
-    {"date": "2026-05-01", "value": 108},
-    {"date": "2026-06-01", "value": 106},
-    {"date": "2026-07-01", "value": 112},
-    {"date": "2026-08-01", "value": 115},
-    {"date": "2026-09-01", "value": 118}
-  ],
-  "allocation": [
-    {"name": "权益", "value": 45},
-    {"name": "债券", "value": 30},
-    {"name": "现金", "value": 15},
-    {"name": "其他", "value": 10}
-  ]
+  "updatedAt": "",
+  "series": [],
+  "allocation": []
 }

@@ -1,10 +1,8 @@
 # 个人知识库
 
-基于 Docusaurus 3 的个人活知识库骨架（FEEI.CN 式架构方案的原创实现）。
+基于 Docusaurus 3 的个人活知识库骨架。
 
 四大支柱：**健康 · 事业 · 财务 · 人生体验**。内容以 Markdown 存放于 Git，无 CMS / 数据库。
-
-> 本仓库为原创占位内容与工作流脚手架，未复制任何第三方站点的专有文案。
 
 ## 本地运行
 
@@ -17,7 +15,7 @@ npm run build
 npm run serve
 ```
 
-亦可用 Bun（本环境已验证）：
+亦可用 Bun：
 
 ```bash
 bun install
@@ -43,24 +41,34 @@ bun run build
 3. **数据**：客观序列写入 `static/data/**/*.json`，由看板页渲染。
 4. **发布**：推送到 `main` 后由 GitHub Actions 自动构建。
 
+## 目录结构
+
+| 路径 | 说明 |
+| --- | --- |
+| docs/about/ | 站点框架说明（内容标准 / 生产 / 架构） |
+| docs/health/ | 健康支柱 |
+| docs/career/ | 事业支柱 |
+| docs/finance/ | 财务支柱 |
+| docs/life/ | 人生体验支柱 |
+| src/pages/charts/ | 数据看板壳页面 |
+| static/data/ | JSON 数据（空壳，自行填充） |
+| .github/workflows/build.yml | CI 构建 |
+
 ## 主要路由
 
 | 路由 | 说明 |
 | --- | --- |
-| / | 首页（活知识库说明 + 四大支柱入口） |
-| /docs/about/overview | 关于本站 |
-| /docs/about/content-standards | 内容标准 |
-| /docs/about/content-production | 内容如何生产 |
-| /docs/about/tech-architecture | 技术架构 |
+| / | 首页 |
+| /docs/about/* | 关于本站 / 内容标准 / 生产 / 架构 |
 | /docs/health/* | 健康支柱 |
 | /docs/career/* | 事业支柱 |
 | /docs/finance/* | 财务支柱 |
 | /docs/life/* | 人生体验支柱 |
-| /charts/finance | 财务看板（ECharts + JSON 示例） |
+| /charts/finance | 财务看板（数据放 static/data） |
 
 ## CI
 
-工作流模板见 `ci/build.yml`。复制到 `.github/workflows/build.yml` 后即可启用（推送该路径需要 GitHub token 具备 workflow 权限）。启用后会在 push / PR 到 main 时安装依赖、执行构建，并上传 build artifact。
+工作流见 `.github/workflows/build.yml`：push / PR 到 main 时安装依赖、执行构建，并上传 build artifact。
 
 ## 仓库
 
